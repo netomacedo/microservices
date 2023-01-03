@@ -1,21 +1,20 @@
 server:
-  port:8080
-
+  port: 8081
 spring:
   application:
-    name: customer
+    name: fraud
   datasource:
     password: '12345'
-    url: jdbc:postgresql://localhost:5432/customer
+    url: jdbc:postgresql://localhost:5432/fraud
     username: 'admin'
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: 'true'
-      show-sql: 'true'
+    show-sql: 'true'
 eureka:
   client:
     service-url:
